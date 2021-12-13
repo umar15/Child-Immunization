@@ -1,0 +1,12 @@
+{
+   "PORT": 3100,
+   "mongodb": {
+      "host": "mongodb://localhost:27017/lms",
+      "credentials": {
+         "username": "",
+         "password": ""
+      },
+      "enableMongoDebugging": true
+
+   }
+}
