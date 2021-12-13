@@ -74,6 +74,16 @@ require("./config/mongooseConnection")((err) => {
 	if (err) {
 		winston.error(err);
 	} else {
+		// Serve static assets if in production
+		if (process.env.NODE_ENV === "production") {
+			// Set static folder
+			app.use(express.static("client/build"));
+
+			app.get("*", (req, res) => {
+				res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+			});
+		}
+
 		global.server = http.createServer(app);
 		global.server.listen(global.config.PORT);
 		// global.server.listen("3000");
@@ -125,13 +135,6 @@ require("./config/mongooseConnection")((err) => {
 		app.use(passport.session());
 
 		global.errors = require("./config/errors");
-
-		// Step 1: for client routes
-		app.use(express.static(path.resolve(__dirname, "./client/build")));
-		// Step 2:
-		app.get("*", function (request, response) {
-			response.sendFile(path.resolve(__dirname, "./client/build", "index.html"));
-		});
 
 		// Routes
 		let userRoutes = "app/**/*.routes.js";
