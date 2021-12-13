@@ -1,0 +1,1159 @@
+@import url(https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap);
+
+:root {
+   --blue: #007bff;
+   --indigo: #6610f2;
+   --purple: #6f42c1;
+   --pink: #e83e8c;
+   --red: #dc3545;
+   --orange: #fd7e14;
+   --yellow: #ffc107;
+   --green: #28a745;
+   --teal: #20c997;
+   --cyan: #17a2b8;
+   --white: #fff;
+   --gray: #6c757d;
+   --gray-dark: #343a40;
+   --primary: #007bff;
+   --secondary: #6c757d;
+   --success: #28a745;
+   --info: #17a2b8;
+   --warning: #ffc107;
+   --danger: #dc3545;
+   --light: #f8f9fa;
+   --dark: #343a40;
+   --btnColor: #0Cb8B6;
+   --defaultBg: #e6f7fc;
+   --textColor: #212529;
+   --input-bg: #f2f9fc;
+   --breakpoint-xs: 0;
+   --breakpoint-sm: 576px;
+   --breakpoint-md: 768px;
+   --breakpoint-lg: 992px;
+   --breakpoint-xl: 1200px;
+   --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace
+}
+
+*, :after, :before {
+   box-sizing: border-box
+}
+
+html {
+   font-family: sans-serif;
+   line-height: 1.15;
+   -webkit-text-size-adjust: 100%;
+   -webkit-tap-highlight-color: transparent
+}
+
+body {
+   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+   font-size: 1rem;
+   font-weight: 400;
+   line-height: 1.5;
+   color: --var(textColor);
+   text-align: left;
+   background-color: #fff
+}
+
+.err {
+   color: var(--danger);
+   font-size: 14px;
+   font-weight: 400;
+   margin-top: -7px;
+}
+
+hr {
+   box-sizing: content-box;
+   height: 0;
+   overflow: visible
+}
+
+h1, h2, h3, h4, h5, h6 {
+   margin-top: 0;
+   margin-bottom: .5rem
+}
+
+p {
+   margin-top: 0;
+   margin-bottom: 1rem
+}
+
+abbr[data-original-title], abbr[title] {
+   text-decoration: underline;
+   text-decoration: underline dotted;
+   cursor: help;
+   border-bottom: 0;
+   text-decoration-skip-ink: none
+}
+
+dl, ol, ul {
+   margin-top: 0
+}
+
+ol ol, ol ul, ul ol, ul ul {
+   margin-bottom: 0
+}
+
+a {
+   color: #007bff;
+   background-color: transparent
+}
+
+a:hover {
+   color: #0056b3;
+   text-decoration: underline
+}
+
+a:not([href]):not([tabindex]) {
+   color: inherit;
+   text-decoration: none
+}
+
+a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover {
+   color: inherit;
+   text-decoration: none
+}
+
+a:not([href]):not([tabindex]):focus {
+   outline: 0
+}
+
+img {
+   border-style: none
+}
+
+img, svg {
+   vertical-align: middle
+}
+
+svg {
+   overflow: hidden
+}
+
+table {
+   border-collapse: collapse
+}
+
+caption {
+   padding-top: .75rem;
+   padding-bottom: .75rem;
+   color: #6c757d;
+   text-align: left;
+   caption-side: bottom
+}
+
+th {
+   text-align: inherit
+}
+
+thead {
+   background-color: #f2f9fc;
+}
+
+label {
+   display: inline-block;
+   margin-bottom: .5rem
+}
+
+button {
+   border-radius: 0
+}
+
+button:focus {
+   outline: 1px dotted;
+   outline: 5px auto -webkit-focus-ring-color
+}
+
+button, input, optgroup, select, textarea {
+   margin: 0;
+   font-family: inherit;
+   font-size: inherit;
+   line-height: inherit
+}
+
+button, input {
+   overflow: visible
+}
+
+button, select {
+   text-transform: none
+}
+
+select {
+   word-wrap: normal
+}
+
+textarea {
+   overflow: auto;
+   resize: vertical
+}
+
+[hidden] {
+   display: none !important
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+   margin-bottom: .5rem;
+   font-weight: 500;
+   line-height: 1.2
+}
+
+.h1, h1 {
+   font-size: 2.5rem
+}
+
+.h2, h2 {
+   font-size: 2rem
+}
+
+.h3, h3 {
+   font-size: 1.75rem
+}
+
+.h4, h4 {
+   font-size: 1.5rem
+}
+
+.h5, h5 {
+   font-size: 1.25rem
+}
+
+.h6, h6 {
+   font-size: 1rem
+}
+
+/* =========================================
+Header Styles
+========================================= */
+
+.header {
+   background-color: var(--defaultBg);
+}
+
+.nav-link {
+   color: var(--dark) !important;
+}
+
+.nav-bar {
+   margin: 0px 150px;
+}
+
+.btnStyles {
+   margin: 5px;
+   background-color: var(--btnColor) !important;
+   border: var(--btnColor) !important;
+}
+
+/* =========================================
+Welcome banner Styles
+========================================= */
+
+.welcome-banner {
+   height: 560px !important;
+   background-color: var(--defaultBg);
+}
+
+.banner-text {
+   margin-left: 150px;
+   margin-top: 50px;
+}
+
+.banner-img-wrap {
+   max-width: 490px;
+   position: relative;
+   top: -135px;
+   margin-left: auto;
+   right: 0;
+}
+
+.banner-img {
+   margin-left: -177%;
+   overflow: hidden;
+   animation: banner1 3s infinite;
+   animation-delay: 3s;
+}
+
+@keyframes banner1 {
+   0% {
+      opacity: 0;
+   }
+
+   50% {
+      opacity: 1;
+   }
+
+   100% {
+      opacity: 0;
+   }
+}
+
+.shape {
+   margin-top: -90%;
+   margin-left: -5%;
+   animation: bg2 4s infinite;
+}
+
+.bg2 {
+   width: 90%;
+}
+
+@keyframes bg2 {
+   0% {
+      margin-top: -90%;
+   }
+
+   50% {
+      margin-top: -95%;
+   }
+
+   100% {
+      margin-top: -90%;
+   }
+}
+
+.default-btn {
+   font-size: 16px;
+   color: #fff !important;
+   margin-right: 10px;
+   padding: 10px 15px;
+   line-height: 1;
+   -webkit-transition: all .5s;
+   transition: all .5s;
+   text-transform: capitalize;
+   position: relative;
+   cursor: pointer;
+   border-radius: 4px;
+   text-align: center;
+   overflow: hidden;
+   z-index: 1;
+   background-color: var(--btnColor);
+   border: none;
+}
+
+.default-btn:hover {
+   background-color: #0f9e9d;
+   color: #fff;
+   text-decoration: none;
+}
+
+.topic {
+   color: var(--btnColor);
+   font-weight: 500;
+}
+
+.main-heading {
+   font-size: 50px;
+   font-weight: 700;
+   margin-top: 30px;
+}
+
+.sub-text {
+   color: var(--gray-dark);
+   margin-top: 30px;
+   margin-bottom: 60px;
+}
+
+/* =========================================
+Home page about us Styles
+========================================= */
+
+.about-area {
+   margin-top: 100px;
+}
+
+.about-img {
+   position: absolute;
+   left: -110px;
+   width: 660px;
+   height: 630px;
+   background-color: #0cb8b6;
+   z-index: -1
+}
+
+.about-content {
+   margin-left: 25px;
+}
+
+.heading {
+   font-size: 40px;
+   margin-top: 20px;
+   margin-left: -2px;
+}
+
+.topic-text {
+   line-height: 25px;
+   margin-top: 20px;
+}
+
+.vaccine-list {
+   line-height: 40px;
+   list-style-type: none;
+   margin-left: -30px;
+   margin-bottom: 40px;
+   font-weight: 500;
+}
+
+.flaticon-tick {
+   margin-right: 10px;
+   color: var(--btnColor) !important;
+   background-color: #efefef;
+   padding: 5px;
+   padding-top: 0;
+   border-radius: 50%;
+}
+
+.flaticon-tick:hover {
+   background-color: var(--btnColor) !important;
+   color: #ffffff !important;
+}
+
+/* =========================================
+Home page our mission Styles
+========================================= */
+
+.mission-content {
+   margin-left: -20px;
+}
+
+.mission-img {
+   margin-left: -1px;
+   width: 660px;
+   height: 580px;
+   background-color: #0cb8b6;
+}
+
+.mission-icon {
+   margin-right: 0;
+   padding-left: 0%;
+   padding-right: 0%;
+}
+
+/* =========================================
+Home page vaccination schedule Styles
+========================================= */
+
+.doctor-vaccination-area {
+   text-align: center;
+}
+
+.section-title {
+   width: 60%;
+   margin: auto;
+}
+
+.schedule-heading {
+   font-size: 40px;
+   margin-top: 10px;
+}
+
+.schedule-text {
+   margin-bottom: 50px;
+}
+
+.doctor-vaccination-table {
+   background-color: #fff;
+   box-shadow: 0 0 20px 3px rgba(0, 0, 0, .05)
+}
+
+.doctor-vaccination-table table {
+   margin-bottom: 0
+}
+
+.doctor-vaccination-table table thead tr th {
+   vertical-align: middle;
+   text-align: center;
+   white-space: nowrap;
+   font-size: 16px;
+   font-weight: 500;
+   padding: 30px 10px;
+   border-bottom: 1px solid #eee;
+   border-left: 1px solid #eee
+}
+
+.doctor-vaccination-table table thead tr th:first-child {
+   border-left: none
+}
+
+.doctor-vaccination-table table tbody tr td {
+   vertical-align: middle;
+   text-align: center;
+   border: 1px solid #eee;
+   border-top: none;
+   -webkit-transition: all .5s;
+   transition: all .5s;
+   white-space: nowrap;
+   padding: 25px
+}
+
+.doctor-vaccination-table table tbody tr td:first-child {
+   border-left: none
+}
+
+.doctor-vaccination-table table tbody tr td:last-child {
+   border-right: none
+}
+
+.doctor-vaccination-table table tbody tr td h3 {
+   margin-bottom: 0;
+   -webkit-transition: all .5s;
+   transition: all .5s;
+   font-size: 16px;
+   font-weight: 600
+}
+
+.doctor-vaccination-table table tbody tr td span {
+   display: block;
+   color: #525252;
+   font-size: 14.5px;
+   margin-top: 5px;
+   -webkit-transition: all .5s;
+   transition: all .5s
+}
+
+.doctor-vaccination-table table tbody tr td span.time {
+   display: inline-block;
+   background-color: #fff;
+   color: #0cb8b6;
+   width: 65px;
+   height: 65px;
+   border-radius: 50%;
+   line-height: 65px;
+   -webkit-transition: all .5s;
+   transition: all .5s;
+   font-weight: 500;
+   font-size: 16px
+}
+
+.doctor-vaccination-table table tbody tr td:hover {
+   background-color: #0cb8b6;
+   border-color: #0cb8b6
+}
+
+.doctor-vaccination-table table tbody tr td:hover h3 {
+   color: #fff
+}
+
+.doctor-vaccination-table table tbody tr td:hover span {
+   color: #fff
+}
+
+.doctor-vaccination-table table tbody tr td:hover span.time {
+   background-color: #fff;
+   color: #0cb8b6
+}
+
+.doctor-vaccination-table table tbody tr:last-child td {
+   border-bottom: none
+}
+
+.tb-color-2 {
+   background-color: #fdec8c
+}
+
+.tb-color-3 {
+   background-color: #fc9ffc
+}
+
+.tb-color-4 {
+   background-color: #fcce98
+}
+
+.tb-color-5 {
+   background-color: #ccfc86
+}
+
+.tb-color-6 {
+   background-color: #acb0fe
+}
+
+.tb-color-7 {
+   background-color: #fca68e
+}
+
+.tb-color-8 {
+   background-color: #e6cda4
+}
+
+.tb-color-9 {
+   background-color: #87edfc
+}
+
+.tb-color-10 {
+   background-color: #df92fc
+}
+
+/* =========================================
+Home page our doctor Styles
+========================================= */
+
+.doctors-area {
+   margin-top: 80px;
+   background-color: var(--defaultBg);
+}
+
+.doctors-content {
+   padding: 50px 0;
+   height: 600px;
+}
+
+.doctor-heading {
+   font-size: 40px;
+   margin-top: 20px;
+}
+
+.doctors-img {
+   width: 660px;
+   height: 600px;
+   margin-left: -15px;
+}
+
+.tick {
+   background-color: #fff;
+}
+
+/* =========================================
+Home page footer Styles
+========================================= */
+
+.footer-top-area {
+   height: 300px;
+   padding-top: 50px;
+   background: url("./assets//images/footer-bg.jpg");
+   background-repeat: no-repeat;
+   background-size: cover;
+   color: #fff;
+}
+
+.social-area ul {
+   list-style-type: none;
+   display: flex;
+   flex-direction: row;
+   margin-left: -50px;
+}
+
+.social-area ul li {
+   margin: 7px;
+}
+
+.social-area ul li a i:first-child {
+   height: 30px !important;
+   padding: 7px;
+   padding-top: 4px;
+   color: var(--btnColor) !important;
+   background-color: #fff;
+   border-radius: 50%;
+}
+
+.single-widget ul {
+   list-style-type: none;
+   line-height: 25px;
+}
+
+.single-widget p {
+   margin-top: 12px;
+}
+
+.single-widget h3 {
+   margin-left: 37px;
+   margin-bottom: 20px;
+   color: var(--btnColor);
+}
+
+.single-widget.open-time li {
+   padding-bottom: 10px;
+   margin-bottom: 15px;
+   border-bottom: 1px solid #0cb8b6
+}
+
+.single-widget.open-time li .right {
+   float: right
+}
+
+.single-widget.open-time li:last-child {
+   padding-bottom: 0;
+   border-bottom: none
+}
+
+.contact a {
+   color: #fff;
+}
+
+.bxa:first-child {
+   color: var(--btnColor) !important;
+   margin-right: 10px;
+   height: 20px !important;
+   width: 20px !important;
+}
+
+.contact-us {
+   margin-left: 30px;
+}
+
+/* =========================================
+Home page footer bottom area Styles
+========================================= */
+
+.footer-bottom-area {
+   /* position: fixed; */
+   left: 0;
+   bottom: 0;
+   top: 100%;
+   width: 100%;
+   color: white;
+   text-align: center;
+   background-color: #05224c;
+   padding: 20px 0;
+}
+
+.footer-bottom-area .copy-right {
+   text-align: center
+}
+
+.footer-bottom-area .copy-right p {
+   text-transform: capitalize;
+   margin-bottom: 0;
+   color: #fff
+}
+
+.footer-bottom-area .copy-right p a {
+   color: #0cb8b6
+}
+
+.footer-bottom-area .copy-right p a:hover {
+   text-decoration: underline
+}
+
+/* =========================================
+SIgn up form styles
+========================================= */
+
+.signup-area {
+   margin: 50px 100px;
+}
+
+.section-title {
+   text-align: center;
+   margin-bottom: 50px;
+}
+
+.signup-form {
+   height: 875px;
+   width: 540px;
+   box-shadow: 0 0 20px 3px rgba(0, 0, 0, .05);
+   padding: 50px;
+}
+
+.form-group input, .form-group select, .form-group input[type=password] {
+   background-color: #f2f9fc;
+}
+
+/* .form-control-date {
+   width: 570px !important;
+} */
+
+.form-group input[type=text], .form-group select, .form-group input[type=password], .form-group input[type=date], .form-group input[type=number] {
+   height: 50px;
+   margin: 5px 0;
+}
+
+.form-group input[type=email] {
+   height: 50px;
+   margin: 5px 0;
+}
+
+.agree-label input[type=select] {
+   padding-right: 10px;
+}
+
+.agree-label, .account-desc {
+   font-weight: 600;
+   position: relative;
+   color: var(--gray-dark);
+}
+
+.agree-label input[type=checkbox] {
+   position: absolute;
+   background-color: #f2f9fc;
+   top: 6px
+}
+
+.agree-label label, .account-desc {
+   margin-left: 20px;
+}
+
+.agree-label a, .account-desc a, .forget {
+   color: var(--btnColor);
+}
+
+.agree-label a:hover, .account-desc a:hover, .forget:hover {
+   text-decoration: none;
+   color: var(--primary);
+}
+
+.signup-btn {
+   padding: 10px 50px;
+   margin: 20px 30%;
+}
+
+.account-desc {
+   margin-left: 0%;
+}
+
+.signup-img img {
+   height: 875px;
+   width: 540px;
+}
+
+/* =========================================
+Log in form styles
+========================================= */
+
+.login-form {
+   height: 455px;
+   width: 540px;
+   box-shadow: 0 0 20px 3px rgba(0, 0, 0, .05);
+   padding: 50px;
+}
+
+.login-img img {
+   height: 455px;
+   width: 540px;
+}
+
+.forget {
+   float: right;
+   font-weight: 600;
+}
+
+/* =========================================
+Add child form form styles
+========================================= */
+
+.add-child-form {
+   width: 50%;
+   margin: auto;
+   box-shadow: 0 0 20px 3px rgba(0, 0, 0, .05);
+   padding: 50px;
+}
+
+/* =========================================
+Add stock form form styles
+========================================= */
+
+.add-stock-btn {
+   margin-left: 35%;
+   margin-top: 20px;
+   /* width: 70%; */
+}
+
+/* =========================================
+display table styles
+========================================= */
+
+.display-table {
+   height: 100%;
+   padding: 20px 0;
+   text-align: center;
+}
+
+.table-heading {
+   margin-bottom: 30px;
+}
+
+.editIcon {
+   color: var(--btnColor);
+}
+
+.deleteIcon {
+   color: var(--danger);
+}
+
+/* =========================================
+dashboard styles
+========================================= */
+
+.admin-container {
+   margin: 0% !important;
+   margin-right: 0% !important;
+   max-width: 100% !important;
+   padding: 0% !important;
+   /* overflow: scroll; */
+}
+
+.vc-header {
+   background-color: #001027;
+   color: #fff;
+   margin-left: -150px;
+}
+
+.hospital-dashboard {
+   margin: 0% !important;
+   padding: 0%;
+}
+
+.hospital-container {
+   margin: 0px !important;
+}
+
+.sidebar {
+   /* position: fixed; */
+   height: 1200px;
+   width: 250px;
+   background-color: #001027;
+   padding: 10px;
+   /* position: fixed; */
+   /* margin-left: -20px; */
+}
+
+.sidebar-row {
+   max-width: 20% !important;
+}
+
+.sidebarIcon {
+   display: none;
+}
+
+@media screen and (max-width: 728px) {
+   .sidebar {
+      /* display: none; */
+      width: 100%;
+      height: 600px !important;
+   }
+
+   .sidebar-row {
+      max-width: 100% !important;
+   }
+
+   .sidebarIcon {
+      display: block;
+   }
+}
+
+.sidebar ul {
+   list-style: none;
+   margin-top: 10%;
+   font-size: 17px;
+   font-weight: 600;
+}
+
+.sidebar li {
+   list-style-type: none;
+   color: black;
+   padding: 10px;
+   margin: 10px 5px;
+   margin-left: -35px;
+   background-color: var(--input-bg);
+   border-radius: 5px;
+}
+
+.sidebar li:hover, .link:hover {
+   background-color: var(--btnColor);
+   color: var(--white) !important;
+}
+
+.link {
+   text-decoration: none !important;
+   color: black !important;
+}
+
+.sidebar-icon {
+   color: var(--btnColor);
+   width: 50px;
+   margin-top: -3px;
+}
+
+.sidebar-icon:hover {
+   color: var(--input-bg);
+}
+
+.data-table {
+   margin: 0%;
+}
+
+/* =========================================
+add form styles
+========================================= */
+
+.add-form {
+   /* box-shadow: 0 0 20px 3px rgba(0, 0, 0, .05); */
+   width: 100%;
+   padding: 30px 10%;
+   margin-left: 10%;
+}
+
+.add-campaign {
+   box-shadow: 0 0 20px 3px rgba(0, 0, 0, .05);
+   padding: 30px;
+}
+
+/* =========================================
+search styles styles
+========================================= */
+
+.search-field {
+   margin-left: 70px;
+   display: flex;
+   flex-direction: row;
+}
+
+.search-field button {
+   background-color: var(--btnColor);
+   border: none;
+   width: 100px;
+   height: 50px;
+   margin-top: 10px;
+}
+
+/* =========================================
+card styles
+========================================= */
+
+.card {
+   height: 100px;
+   width: 165px;
+   margin: 0px -10px 10px -15px;
+   /* color: white; */
+}
+
+.card-sub {
+   color: var(--secondary) !important;
+}
+
+.blue {
+   background-color: #c6c5fd !important;
+}
+
+.green {
+   background-color: #cbffd3 !important;
+}
+
+.red {
+   background-color: #fdd1d1 !important;
+}
+
+.yellow {
+   background-color: #fbffd3 !important;
+}
+
+toast-admin {
+   max-width: 1000px;
+}
+
+.subadmin-admin {
+   background-color: var(--input-bg);
+   margin-top: 30px;
+   padding: 5px;
+}
+
+.subadmin-table {
+   margin-top: 30px;
+   padding: 5px;
+}
+
+/* Notifications */
+
+.notification-item:hover {
+   background-color: #efefef;
+   cursor: pointer;
+}
+
+.notification {
+   text-decoration: none;
+   color: black;
+}
+
+.notification:hover {
+   text-decoration: none;
+   color: black;
+}
+
+.checkbox {
+   /* height: 30px */
+   transform: scale(2);
+   margin-right: 20px;
+}
+
+/* Birth certificate */
+
+.birth {
+   width: 85%;
+   margin: 50px auto;
+   text-align: center;
+   border: 2px solid black;
+   background-color: var(--input-bg);
+}
+
+.heading {
+   font-size: 100px;
+   font-weight: 900;
+   margin-bottom: 100px;
+   margin-top: 100px;
+}
+
+.certificate-body {
+   line-height: 100px;
+   margin-bottom: 130px;
+}
+
+.sign {
+   margin-left: 50%;
+   margin-bottom: 100px;
+}
+
+.schedule {
+   margin-top: 200px;
+}
+
+.schedule-table {
+   font-weight: bold;
+   font-size: 20px;
+}
+
+.thead-sch {
+   font-size: 30px;
+}
+
+.dob {
+   text-decoration: underline;
+}
+
+/* Pagination */
+
+.pagination {
+   display: flex;
+   justify-content: center;
+   list-style: none;
+   margin-top: 20px;
+   padding: 0;
+}
+
+.pagination a {
+   cursor: default;
+   padding: 10px;
+   border-radius: 5px;
+   border: 1px solid #0Cb8B6;
+   color: #0Cb8B6;
+   margin-left: 10px;
+}
+
+.pagination li:not(.disabled) a:hover {
+   background-color: rgb(196, 227, 255);
+   cursor: pointer;
+}
+
+.pagination li a {
+   font-weight: bold;
+}
+
+.pagination li.active a {
+   color: #fff;
+   background: #0Cb8B6;
+}
+
+.pagination li.disabled a {
+   pointer-events: none;
+   color: rgb(198, 197, 202);
+   border: 1px solid #0Cb8B6;
+}
