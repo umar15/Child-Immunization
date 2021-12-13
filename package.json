@@ -3,10 +3,14 @@
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
+  "proxy": "http://localhost:3000",
   "scripts": {
-    "start": "node app.js",
-    "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+      "build": "cd client && npm run build",
+      "install-client": "cd client && npm install",
+      "heroku-postbuild": "npm run install-client && npm run build",
+      "server": "nodemon app.js",
+      "develop": "concurrently --kill-others-on-fail \"npm run app\" \"npm run start --prefix client\"",
+      "start": "concurrently --kill-others-on-fail \"npm run app\" \"npm run start --prefix client\""
   },
   "engines": {
         "node": "14.17.6"

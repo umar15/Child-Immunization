@@ -126,6 +126,13 @@ require("./config/mongooseConnection")((err) => {
 
 		global.errors = require("./config/errors");
 
+		// Step 1: for client routes
+		app.use(express.static(path.resolve(__dirname, "./client/build")));
+		// Step 2:
+		app.get("*", function (request, response) {
+			response.sendFile(path.resolve(__dirname, "./client/build", "index.html"));
+		});
+
 		// Routes
 		let userRoutes = "app/**/*.routes.js";
 		glob.sync(userRoutes).forEach((file) => {
