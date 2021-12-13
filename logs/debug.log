@@ -22621,3 +22621,25 @@ TypeError: Cannot read property 'area' of undefined
 [2021-12-13 12:54:44] [32minfo[39m:  [object Object] 
 [2021-12-13 12:54:44] [32minfo[39m:  Loaded config file: development 
 [2021-12-13 12:54:44] [32minfo[39m:  Try to connect mongodb. 
+[2021-12-13 13:47:38] [32minfo[39m:  .env files are loading... 
+[2021-12-13 13:47:38] [32minfo[39m:  .env is loaded 
+[2021-12-13 13:47:38] [32minfo[39m:  [object Object] 
+[2021-12-13 13:47:38] [32minfo[39m:  Loaded config file: development 
+[2021-12-13 13:47:38] [32minfo[39m:  Try to connect mongodb. 
+[2021-12-13 13:47:42] [32minfo[39m:  mongoose connection open. 
+[2021-12-13 13:47:42] [32minfo[39m:  models are loading ... 
+[2021-12-13 13:47:42] [32minfo[39m:  Models loaded 
+[2021-12-13 13:47:42] [32minfo[39m:  error messages are loading ... 
+[2021-12-13 13:47:43] [32minfo[39m:  Routes are loaded in system. 
+[2021-12-13 13:47:43] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-12-13 13:53:06] [32minfo[39m:  .env files are loading... 
+[2021-12-13 13:53:06] [32minfo[39m:  .env is loaded 
+[2021-12-13 13:53:06] [32minfo[39m:  [object Object] 
+[2021-12-13 13:53:06] [32minfo[39m:  Loaded config file: development 
+[2021-12-13 13:53:06] [32minfo[39m:  Try to connect mongodb. 
+[2021-12-13 13:53:10] [32minfo[39m:  mongoose connection open. 
+[2021-12-13 13:53:10] [32minfo[39m:  models are loading ... 
+[2021-12-13 13:53:10] [32minfo[39m:  Models loaded 
+[2021-12-13 13:53:10] [32minfo[39m:  error messages are loading ... 
+[2021-12-13 13:53:10] [32minfo[39m:  Routes are loaded in system. 
+[2021-12-13 13:53:10] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
